@@ -1,0 +1,310 @@
+/* --- Global Variables (Luxury Light Theme) --- */
+:root {
+    --bg-main: #faf9f6; /* Alabaster / Off-White */
+    --bg-card: #ffffff;
+    --primary: #b5a397; /* Muted Taupe */
+    --primary-hover: #9c8b80;
+    --text-dark: #2c2c2c; /* Soft Black */
+    --text-light: #737373; /* Medium Gray */
+    --border-color: #e5e5e5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    font-family: 'Montserrat', sans-serif; /* Clean body font */
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* Elegant Serif Font for Headings */
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* --- Navigation (Light Frosted Glass) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(250, 249, 246, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary);
+}
+
+/* --- Buttons --- */
+.btn-solid {
+    background-color: var(--text-dark);
+    color: var(--bg-main);
+    padding: 12px 30px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-solid:hover {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.btn-outline {
+    border: 1px solid var(--text-dark);
+    color: var(--text-dark);
+    padding: 12px 30px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+}
+
+.btn-outline:hover {
+    background-color: var(--text-dark);
+    color: var(--bg-main);
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 90vh;
+    background-image: url('https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1920&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+/* A soft, light overlay to make the black text readable */
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(250, 249, 246, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* --- Sections & Typography --- */
+.section-padding {
+    padding: 100px 5%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+}
+
+/* --- Image Cards (Home) --- */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image-card {
+    background: var(--bg-card);
+    text-align: center;
+    transition: transform 0.4s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-10px);
+}
+
+.image-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 30px;
+}
+
+.card-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+/* --- Menu / Pricing Layout (Services) --- */
+.menu-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.menu-category {
+    margin-bottom: 60px;
+}
+
+.menu-category h2 {
+    font-size: 2.2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+.menu-item-info h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.menu-item-info p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    max-width: 400px;
+}
+
+.menu-price {
+    font-size: 1.2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+/* --- Testimonial Banner --- */
+.testimonial {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 80px 5%;
+}
+
+.testimonial h2 {
+    font-size: 2.5rem;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--bg-card);
+    padding: 80px 5% 40px;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+.footer-col h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-col p, .footer-col a {
+    color: var(--text-light);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-col a:hover {
+    color: var(--primary);
+}
+
+.hours span {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed var(--border-color);
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero h1 { font-size: 2.8rem; }
+}
